@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@500;700&display=swap");
 
 :root {
-  --brandColor: #031e0e;
+  --brandColor: #034032;
+  --darkColor: #031e0e;
 }
 
 html {
@@ -45,6 +46,12 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 25, 0, 0.8)),
     url(../img/1_marek-piwnicki-YsrnYUBxmQ0-unsplash.jpg);
@@ -82,14 +89,24 @@ header a {
 }
 
 .grid-3-columns {
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-4-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
 }
 
 main {
   background-color: #fff;
 }
 
-main h3 {
+main h3,
+.secondary h3 {
   opacity: 0.5;
 }
 
@@ -104,14 +121,73 @@ main p {
   line-height: 1.5;
 }
 
+.filters {
+  filter: brightness(90%) contrast(118%) saturate(69%);
+}
+
 section {
   margin: 0 auto;
   max-width: 100%;
-  padding: 100px;
+  padding: 6.25rem;
 }
 
-.filters {
-  filter: brightness(90%) contrast(118%) saturate(69%);
+section.secondary {
+  background: #e3e7df;
+}
+
+.secondary .container {
+  padding: 0 6.25rem;
+}
+
+.card {
+  background: white;
+  margin: 1rem 0;
+}
+
+.card h4 {
+  color: var(--brandColor);
+}
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
+.card-body {
+  padding: 1rem 2rem;
+}
+
+.card-body p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.card-footer {
+  padding: 0 2rem 2rem;
+}
+
+.btn {
+  background-color: var(--brandColor);
+  color: #fff;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: #085c49;
+  transition: all 300ms ease-in-out;
+}
+
+.embed {
+  aspect-ratio: 1 /1;
+  width: 100%;
 }
 
 footer h3 {
@@ -119,7 +195,7 @@ footer h3 {
 }
 
 footer {
-  background-color: var(--brandColor);
+  background-color: var(--darkColor);
   color: #fff;
 }
 
@@ -163,5 +239,13 @@ footer .text-centered {
   .grid {
     grid-gap: 32px;
     grid-template-columns: 1fr;
+  }
+
+  .embed {
+    aspect-ratio: 16 / 9;
+  }
+
+  .card-header img {
+    display: none;
   }
 }
