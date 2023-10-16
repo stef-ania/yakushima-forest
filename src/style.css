@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
@@ -77,14 +77,41 @@ header a {
   grid-gap: 64px;
 }
 
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
 .grid-3-columns {
   grid-template-columns: 2fr 2fr 2fr 2fr;
+}
+
+main {
+  background-color: #fff;
+}
+
+main h3 {
+  opacity: 0.5;
+}
+
+main h2 {
+  color: var(--brandColor);
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 section {
   margin: 0 auto;
   max-width: 100%;
   padding: 100px;
+}
+
+.filters {
+  filter: brightness(90%) contrast(118%) saturate(69%);
 }
 
 footer h3 {
