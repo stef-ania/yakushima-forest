@@ -136,7 +136,7 @@ main p {
 section {
   margin: 0 auto;
   max-width: 100%;
-  padding: 6.25rem;
+  padding: 100px;
 }
 
 section.secondary {
@@ -144,7 +144,7 @@ section.secondary {
 }
 
 .secondary .container {
-  padding: 0 6.25rem;
+  padding: 0 100px;
 }
 
 .card {
@@ -293,5 +293,9 @@ footer .text-centered {
 
   .card-header img {
     display: none;
+  }
+
+  .responsive-table {
+    overflow-x: auto;
   }
 }
